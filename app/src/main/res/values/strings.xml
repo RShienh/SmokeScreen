@@ -1,0 +1,35 @@
+<resources>
+    <string name="app_name">Smoking Screen</string>
+    <string name="sign_in">Sign In</string>
+    <string name="email_address">Email Address</string>
+    <string name="password">Password</string>
+    <string name="login">Login</string>
+    <string name="didn_t_sign_up_click_to_register">Didn\'t sign up ? Click to Register!</string>
+    <string name="register">Register</string>
+    <string name="confirm_password">Confirm Password</string>
+    <string name="name">Name</string>
+    <string name="register_using_email">Register using Email</string>
+    <string name="settings">Settings</string>
+    <string name="logout">Logout</string>
+    <string name="save">Save</string>
+    <string name="enter_your_name">Enter your name</string>
+    <string name="number_of_cigarettes_smoked_in_a_day">Number of Cigarettes smoked in a day</string>
+    <string name="price_per_pack">Price per pack</string>
+    <string name="exit">Exit</string>
+    <string name="cigarettes_smoked_per_day">Cigarettes smoked per day</string>
+    <string name="cigarettes_in_a_pack">Cigarettes in a pack</string>
+    <string name="years_of_smoking">Years of smoking</string>
+    <string name="choose_currency">Choose Currency</string>
+    <string name="user_profile">User Profile</string>
+    <string name="start_over">Start Over</string>
+    <string name="facebook_app_id">229658237679345</string>
+    <string name="fb_login_protocol_scheme">fb229658237679345</string>
+    <string name="login_using_email">Login using Email</string>
+    <string name="loading">Loading…</string>
+
+    <string-array name="currency_array">
+        <item>CAD - Canadian Dollar</item>
+        <item>INR - Indian Rupees</item>
+        <item>USD - United State Dollar</item>
+    </string-array>
+</resources>

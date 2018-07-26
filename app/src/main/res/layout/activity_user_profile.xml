@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="@dimen/cardViewMargin"
+    android:backgroundTint="@color/colorPrimary"
+    android:elevation="@dimen/cardViewMargin"
+    android:gravity="center"
+    app:cardCornerRadius="@dimen/cardRadius"
+    tools:context=".UserProfile">
+
+    <LinearLayout
+        android:id="@+id/xUserLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:weightSum="12">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1" />
+
+        <EditText
+            android:id="@+id/xCigPerDay"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginEnd="@dimen/button_margin"
+            android:layout_marginStart="@dimen/button_margin"
+            android:layout_marginTop="20dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:hint="@string/cigarettes_smoked_per_day"
+            android:inputType="number"
+            android:textColor="@color/colorIcons"
+            android:textSize="20sp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1" />
+
+        <EditText
+            android:id="@+id/xCigPerPack"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginEnd="@dimen/button_margin"
+            android:layout_marginStart="@dimen/button_margin"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:hint="@string/cigarettes_in_a_pack"
+            android:inputType="number"
+            android:textColor="@color/colorIcons"
+            android:textSize="20sp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1" />
+
+        <EditText
+            android:id="@+id/xYearsOfSmoking"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginEnd="@dimen/button_margin"
+            android:layout_marginStart="@dimen/button_margin"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:hint="@string/years_of_smoking"
+            android:inputType="number|numberDecimal"
+            android:textColor="@color/colorIcons"
+            android:textSize="20sp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1" />
+
+        <EditText
+            android:id="@+id/xPricePerPack"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginEnd="@dimen/button_margin"
+            android:layout_marginStart="@dimen/button_margin"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:hint="@string/price_per_pack"
+            android:inputType="number|numberDecimal"
+            android:textColor="@color/colorIcons"
+            android:textSize="20sp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1" />
+
+        <Spinner
+            android:id="@+id/xUserCurrency"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_gravity="center"
+            android:layout_marginEnd="@dimen/button_margin"
+            android:layout_marginStart="@dimen/button_margin"
+            android:layout_weight="1"
+            android:backgroundTint="@color/textSecondary"
+            android:entries="@array/currency_array"
+            android:gravity="center"
+            android:prompt="@string/choose_currency"
+            android:textAlignment="center"
+            android:textColor="@color/colorIcons"
+            android:textSize="25sp" />
+
+        <Button
+            android:id="@+id/xUserSave"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_margin="20dp"
+            android:layout_weight="2"
+            android:backgroundTint="@color/colorAccent"
+            android:gravity="center"
+            android:text="@string/save"
+            android:textColor="@color/colorIcons"
+            android:textSize="20sp" />
+    </LinearLayout>
+
+
+</android.support.v7.widget.CardView>
