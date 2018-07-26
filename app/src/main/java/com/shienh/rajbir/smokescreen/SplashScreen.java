@@ -13,10 +13,10 @@ import io.netopen.hotbitmapgg.library.view.RingProgressBar;
 
 public class SplashScreen extends AppCompatActivity {
 
-    int progress = 0;
+    private int progress = 0;
     private RingProgressBar mRingProgressBar;
     @SuppressLint("HandlerLeak")
-    Handler handler = new Handler() {
+    private Handler handler = new Handler() {
         @Override
         public void handleMessage(Message msg) {
             super.handleMessage(msg);
@@ -46,6 +46,7 @@ public class SplashScreen extends AppCompatActivity {
                 Intent loginIntent = new Intent(SplashScreen.this, MainActivity.class);
                 loginIntent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
                 startActivity(loginIntent);
+                SplashScreen.this.finish();
             }
         });
 

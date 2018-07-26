@@ -26,6 +26,13 @@
     <string name="fb_login_protocol_scheme">fb229658237679345</string>
     <string name="login_using_email">Login using Email</string>
     <string name="loading">Loading…</string>
+    <string name="smoke_free">Smoke Free</string>
+    <string name="money_saved">Money Saved</string>
+    <string name="life_regained">Life Regained</string>
+    <string name="cigarettes_not_smoked">Cigarettes not smoked</string>
+    <string name="during_the_period_that_you_smoked">During the period that you smoked:</string>
+    <string name="what_will_you_get_in_return">What will you get in return ?</string>
+    <string name="money_and_life_expectancy">Money and life Expectancy</string>
 
     <string-array name="currency_array">
         <item>CAD - Canadian Dollar</item>

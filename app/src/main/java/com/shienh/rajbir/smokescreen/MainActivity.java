@@ -4,13 +4,16 @@ import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.os.Handler;
 import android.support.annotation.NonNull;
 import android.support.design.widget.Snackbar;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.ProgressBar;
 import android.widget.RelativeLayout;
+import android.widget.TextView;
 
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
@@ -32,6 +35,11 @@ public class MainActivity extends AppCompatActivity {
     private float YOS = 0, PPP = 0;
     private String CUR = null;
 
+    private TextView mTextProgress;
+    private ProgressBar mProgressBar;
+    private int ProgressStatus = 0;
+    private Handler handler = new Handler();
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -43,6 +51,31 @@ public class MainActivity extends AppCompatActivity {
 
         loadUserProfile();
         mRelative = findViewById(R.id.MainRelative);
+
+        mTextProgress = findViewById(R.id.txtProgress);
+        mProgressBar = findViewById(R.id.xMainProgressBar);
+
+        new Thread(new Runnable() {
+            @Override
+            public void run() {
+                while (ProgressStatus <= 100) {
+                    handler.post(new Runnable() {
+                        @Override
+                        public void run() {
+                            mProgressBar.setProgress(ProgressStatus);
+                            mTextProgress.setText(ProgressStatus + " %");
+                        }
+                    });
+                    try {
+                        Thread.sleep(100);
+
+                    } catch (InterruptedException e) {
+                        e.printStackTrace();
+                    }
+                    ProgressStatus++;
+                }
+            }
+        }).start();
 
         mAuth = FirebaseAuth.getInstance();
         mAuthStateListener = new FirebaseAuth.AuthStateListener() {

@@ -29,42 +29,500 @@
 
                 <android.support.v7.widget.CardView
                     android:layout_width="match_parent"
-                    android:layout_height="400dp"
+                    android:layout_height="300dp"
                     android:layout_margin="@dimen/cardViewMargin"
-                    android:backgroundTint="@color/colorPrimary"
                     android:elevation="@dimen/cardViewMargin"
                     app:cardCornerRadius="@dimen/cardview_default_radius">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:weightSum="6">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_margin="@dimen/cardViewMargin"
+                            android:layout_weight="1"
+                            android:text="Day 2"
+                            android:textAlignment="center"
+                            android:textSize="25sp" />
+
+                        <FrameLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="0dp"
+                            android:layout_gravity="center"
+                            android:layout_weight="4">
+
+                            <ProgressBar
+                                android:id="@+id/xMainProgressBar"
+                                style="?android:attr/progressBarStyleHorizontal"
+                                android:layout_width="175dp"
+                                android:layout_height="175dp"
+                                android:indeterminate="false"
+                                android:max="100"
+                                android:progress="0"
+                                android:progressDrawable="@drawable/custom_circular_progressbar"
+                                android:secondaryProgress="0" />
+
+                            <TextView
+                                android:id="@+id/txtProgress"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:gravity="center"
+                                android:textAppearance="?android:attr/textAppearanceSmall"
+                                android:textSize="35sp" />
+                        </FrameLayout>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_margin="@dimen/cardViewMargin"
+                            android:layout_weight="1"
+                            android:text="It's been 2 days"
+                            android:textAlignment="center"
+                            android:textSize="25sp" />
+                    </LinearLayout>
+                </android.support.v7.widget.CardView>
+
+                <android.support.v7.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="300dp"
+                    android:layout_margin="@dimen/cardViewMargin"
+                    android:elevation="@dimen/cardViewMargin"
+                    app:cardCornerRadius="@dimen/cardview_default_radius">
+
+                    <GridLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:alignmentMode="alignMargins"
+                        android:columnCount="2"
+                        android:columnOrderPreserved="false"
+                        android:rowCount="2">
+
+                        <android.support.v7.widget.CardView
+                            android:layout_width="0dp"
+                            android:layout_height="0dp"
+                            android:layout_columnWeight="1"
+                            android:layout_margin="@dimen/cardview_default_radius"
+                            android:layout_rowWeight="1"
+                            android:backgroundTint="@color/colorPrimaryLight"
+                            android:elevation="@dimen/cardViewMargin"
+                            app:cardCornerRadius="@dimen/cardview_default_radius">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_gravity="center"
+                                android:gravity="center"
+                                android:orientation="vertical"
+                                android:weightSum="3">
+
+                                <ImageView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="0dp"
+                                    android:layout_weight="1" />
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="0dp"
+                                    android:layout_gravity="center"
+                                    android:layout_margin="@dimen/cardViewMargin"
+                                    android:layout_weight="1"
+                                    android:gravity="center"
+                                    android:text="Time since"
+                                    android:textAlignment="center"
+                                    android:textColor="@color/colorAccent" />
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="0dp"
+                                    android:layout_gravity="center"
+                                    android:layout_margin="@dimen/cardViewMargin"
+                                    android:layout_weight="1"
+                                    android:gravity="center"
+                                    android:text="@string/smoke_free"
+                                    android:textAlignment="center" />
+                            </LinearLayout>
+                        </android.support.v7.widget.CardView>
+
+                        <android.support.v7.widget.CardView
+                            android:layout_width="0dp"
+                            android:layout_height="0dp"
+                            android:layout_columnWeight="1"
+                            android:layout_margin="@dimen/cardview_default_radius"
+                            android:layout_rowWeight="2"
+                            android:backgroundTint="@color/colorPrimaryLight"
+                            android:elevation="@dimen/cardViewMargin"
+                            app:cardCornerRadius="@dimen/cardview_default_radius">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_gravity="center"
+                                android:gravity="center"
+                                android:orientation="vertical"
+                                android:weightSum="3">
+
+                                <ImageView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="0dp"
+                                    android:layout_weight="1" />
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="0dp"
+                                    android:layout_gravity="center"
+                                    android:layout_margin="@dimen/cardViewMargin"
+                                    android:layout_weight="1"
+                                    android:gravity="center"
+                                    android:text="Time since"
+                                    android:textAlignment="center"
+                                    android:textColor="@color/colorAccent" />
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="0dp"
+                                    android:layout_gravity="center"
+                                    android:layout_margin="@dimen/cardViewMargin"
+                                    android:layout_weight="1"
+                                    android:gravity="center"
+                                    android:text="@string/money_saved"
+                                    android:textAlignment="center" />
+                            </LinearLayout>
+                        </android.support.v7.widget.CardView>
+
+                        <android.support.v7.widget.CardView
+                            android:layout_width="0dp"
+                            android:layout_height="0dp"
+                            android:layout_columnWeight="2"
+                            android:layout_margin="@dimen/cardview_default_radius"
+                            android:layout_rowWeight="1"
+                            android:backgroundTint="@color/colorPrimaryLight"
+                            android:elevation="@dimen/cardViewMargin"
+                            app:cardCornerRadius="@dimen/cardview_default_radius">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_gravity="center"
+                                android:gravity="center"
+                                android:orientation="vertical"
+                                android:weightSum="3">
+
+                                <ImageView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="0dp"
+                                    android:layout_weight="1" />
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="0dp"
+                                    android:layout_gravity="center"
+                                    android:layout_margin="@dimen/cardViewMargin"
+                                    android:layout_weight="1"
+                                    android:gravity="center"
+                                    android:text="Time since"
+                                    android:textAlignment="center"
+                                    android:textColor="@color/colorAccent" />
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="0dp"
+                                    android:layout_gravity="center"
+                                    android:layout_margin="@dimen/cardViewMargin"
+                                    android:layout_weight="1"
+                                    android:gravity="center"
+                                    android:text="@string/life_regained"
+                                    android:textAlignment="center" />
+                            </LinearLayout>
+                        </android.support.v7.widget.CardView>
+
+                        <android.support.v7.widget.CardView
+                            android:layout_width="0dp"
+                            android:layout_height="0dp"
+                            android:layout_columnWeight="2"
+                            android:layout_margin="@dimen/cardview_default_radius"
+                            android:layout_rowWeight="2"
+                            android:backgroundTint="@color/colorPrimaryLight"
+                            android:elevation="@dimen/cardViewMargin"
+                            app:cardCornerRadius="@dimen/cardview_default_radius">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_gravity="center"
+                                android:gravity="center"
+                                android:orientation="vertical"
+                                android:weightSum="3">
+
+                                <ImageView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="0dp"
+                                    android:layout_weight="1" />
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="0dp"
+                                    android:layout_gravity="center"
+                                    android:layout_margin="@dimen/cardViewMargin"
+                                    android:layout_weight="1"
+                                    android:gravity="center"
+                                    android:text="Time since"
+                                    android:textAlignment="center"
+                                    android:textColor="@color/colorAccent" />
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="0dp"
+                                    android:layout_gravity="center"
+                                    android:layout_margin="@dimen/cardViewMargin"
+                                    android:layout_weight="1"
+                                    android:gravity="center"
+                                    android:text="@string/cigarettes_not_smoked"
+                                    android:textAlignment="center" />
+                            </LinearLayout>
+                        </android.support.v7.widget.CardView>
+                    </GridLayout>
 
                 </android.support.v7.widget.CardView>
 
                 <android.support.v7.widget.CardView
                     android:layout_width="match_parent"
-                    android:layout_height="400dp"
+                    android:layout_height="200dp"
                     android:layout_margin="@dimen/cardViewMargin"
-                    android:backgroundTint="@color/colorPrimary"
                     android:elevation="@dimen/cardViewMargin"
                     app:cardCornerRadius="@dimen/cardview_default_radius">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        android:weightSum="4">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_gravity="center"
+                            android:layout_margin="@dimen/cardViewMargin"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:text="@string/during_the_period_that_you_smoked"
+                            android:textAlignment="center"
+                            android:textColor="@color/colorAccent" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_weight="1"
+                            android:orientation="horizontal"
+                            android:weightSum="5">
+
+                            <ImageView
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1" />
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_gravity="center"
+                                android:layout_margin="@dimen/cardViewMargin"
+                                android:layout_weight="4"
+                                android:gravity="center"
+                                android:text="@string/during_the_period_that_you_smoked"
+                                android:textAlignment="center"
+                                android:textColor="@color/colorAccent" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_weight="1"
+                            android:orientation="horizontal"
+                            android:weightSum="5">
+
+                            <ImageView
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1" />
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_gravity="center"
+                                android:layout_margin="@dimen/cardViewMargin"
+                                android:layout_weight="4"
+                                android:gravity="center"
+                                android:text="@string/during_the_period_that_you_smoked"
+                                android:textAlignment="center"
+                                android:textColor="@color/colorAccent" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_weight="1"
+                            android:orientation="horizontal"
+                            android:weightSum="5">
+
+                            <ImageView
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1" />
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_gravity="center"
+                                android:layout_margin="@dimen/cardViewMargin"
+                                android:layout_weight="4"
+                                android:gravity="center"
+                                android:text="@string/during_the_period_that_you_smoked"
+                                android:textAlignment="center"
+                                android:textColor="@color/colorAccent" />
+                        </LinearLayout>
+
+                    </LinearLayout>
 
                 </android.support.v7.widget.CardView>
 
                 <android.support.v7.widget.CardView
                     android:layout_width="match_parent"
-                    android:layout_height="400dp"
+                    android:layout_height="300dp"
                     android:layout_margin="@dimen/cardViewMargin"
-                    android:backgroundTint="@color/colorPrimary"
                     android:elevation="@dimen/cardViewMargin"
                     app:cardCornerRadius="@dimen/cardview_default_radius">
 
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        android:weightSum="8">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_margin="@dimen/cardViewMargin"
+                            android:layout_weight="1"
+                            android:gravity="start"
+                            android:paddingEnd="10dp"
+                            android:paddingStart="10dp"
+                            android:text="@string/what_will_you_get_in_return"
+                            android:textAlignment="textStart"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_margin="@dimen/cardViewMargin"
+                            android:layout_weight="1"
+                            android:gravity="start"
+                            android:paddingEnd="10dp"
+                            android:paddingStart="10dp"
+                            android:text="@string/money_and_life_expectancy"
+                            android:textAlignment="textStart" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_gravity="center"
+                            android:layout_margin="@dimen/cardViewMargin"
+                            android:layout_weight="1"
+                            android:background="@color/divider"
+                            android:gravity="center"
+                            android:text="@string/cigarettes_not_smoked"
+                            android:textAlignment="center" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_gravity="center"
+                            android:layout_margin="@dimen/cardViewMargin"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:text="@string/cigarettes_not_smoked"
+                            android:textAlignment="center" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_gravity="center"
+                            android:layout_margin="@dimen/cardViewMargin"
+                            android:layout_weight="1"
+                            android:background="@color/divider"
+                            android:gravity="center"
+                            android:text="@string/cigarettes_not_smoked"
+                            android:textAlignment="center" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_gravity="center"
+                            android:layout_margin="@dimen/cardViewMargin"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:text="@string/cigarettes_not_smoked"
+                            android:textAlignment="center" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_gravity="center"
+                            android:layout_margin="@dimen/cardViewMargin"
+                            android:layout_weight="1"
+                            android:background="@color/divider"
+                            android:gravity="center"
+                            android:text="@string/cigarettes_not_smoked"
+                            android:textAlignment="center" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_gravity="center"
+                            android:layout_margin="@dimen/cardViewMargin"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:text="@string/cigarettes_not_smoked"
+                            android:textAlignment="center" />
+                    </LinearLayout>
                 </android.support.v7.widget.CardView>
 
                 <android.support.v7.widget.CardView
                     android:layout_width="match_parent"
-                    android:layout_height="400dp"
+                    android:layout_height="200dp"
                     android:layout_margin="@dimen/cardViewMargin"
-                    android:backgroundTint="@color/colorPrimary"
                     android:elevation="@dimen/cardViewMargin"
                     app:cardCornerRadius="@dimen/cardview_default_radius">
 
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        android:weightSum="4">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_gravity="start"
+                            android:layout_margin="@dimen/cardViewMargin"
+                            android:layout_weight="1"
+                            android:text="@string/cigarettes_not_smoked"
+                            android:textAlignment="textStart"
+                            android:textStyle="bold" />
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_gravity="center"
+                            android:layout_margin="@dimen/cardViewMargin"
+                            android:layout_weight="3"
+                            android:gravity="center" />
+                    </LinearLayout>
                 </android.support.v7.widget.CardView>
 
             </LinearLayout>
