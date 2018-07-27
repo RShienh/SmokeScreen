@@ -43,11 +43,12 @@
                         android:weightSum="6">
 
                         <TextView
+                            android:id="@+id/xDay"
                             android:layout_width="match_parent"
                             android:layout_height="0dp"
                             android:layout_margin="@dimen/cardViewMargin"
                             android:layout_weight="1"
-                            android:text="Day 2"
+                            android:text="@string/day_1"
                             android:textAlignment="center"
                             android:textSize="25sp" />
 
@@ -57,16 +58,18 @@
                             android:layout_gravity="center"
                             android:layout_weight="4">
 
-                            <ProgressBar
+                            <com.mikhaellopez.circularprogressbar.CircularProgressBar
                                 android:id="@+id/xMainProgressBar"
-                                style="?android:attr/progressBarStyleHorizontal"
                                 android:layout_width="175dp"
                                 android:layout_height="175dp"
                                 android:indeterminate="false"
                                 android:max="100"
                                 android:progress="0"
-                                android:progressDrawable="@drawable/custom_circular_progressbar"
-                                android:secondaryProgress="0" />
+                                android:secondaryProgress="0"
+                                app:cpb_background_progressbar_color="#FFCDD2"
+                                app:cpb_background_progressbar_width="5dp"
+                                app:cpb_progressbar_color="#F44336"
+                                app:cpb_progressbar_width="10dp" />
 
                             <TextView
                                 android:id="@+id/txtProgress"
@@ -79,11 +82,12 @@
                         </FrameLayout>
 
                         <TextView
+                            android:id="@+id/xNumberOfDays"
                             android:layout_width="match_parent"
                             android:layout_height="0dp"
                             android:layout_margin="@dimen/cardViewMargin"
                             android:layout_weight="1"
-                            android:text="It's been 2 days"
+                            android:text="@string/it_s_been_1_days"
                             android:textAlignment="center"
                             android:textSize="25sp" />
                     </LinearLayout>
@@ -110,7 +114,6 @@
                             android:layout_columnWeight="1"
                             android:layout_margin="@dimen/cardview_default_radius"
                             android:layout_rowWeight="1"
-                            android:backgroundTint="@color/colorPrimaryLight"
                             android:elevation="@dimen/cardViewMargin"
                             app:cardCornerRadius="@dimen/cardview_default_radius">
 
@@ -125,16 +128,18 @@
                                 <ImageView
                                     android:layout_width="match_parent"
                                     android:layout_height="0dp"
-                                    android:layout_weight="1" />
+                                    android:layout_weight="1"
+                                    android:contentDescription="@string/not" />
 
                                 <TextView
+                                    android:id="@+id/xSmokeFreeSince"
                                     android:layout_width="match_parent"
                                     android:layout_height="0dp"
                                     android:layout_gravity="center"
                                     android:layout_margin="@dimen/cardViewMargin"
                                     android:layout_weight="1"
                                     android:gravity="center"
-                                    android:text="Time since"
+                                    android:text="@string/_1d_22h_2m_51s"
                                     android:textAlignment="center"
                                     android:textColor="@color/colorAccent" />
 
@@ -156,7 +161,6 @@
                             android:layout_columnWeight="1"
                             android:layout_margin="@dimen/cardview_default_radius"
                             android:layout_rowWeight="2"
-                            android:backgroundTint="@color/colorPrimaryLight"
                             android:elevation="@dimen/cardViewMargin"
                             app:cardCornerRadius="@dimen/cardview_default_radius">
 
@@ -174,13 +178,13 @@
                                     android:layout_weight="1" />
 
                                 <TextView
+                                    android:id="@+id/xMoneySaved"
                                     android:layout_width="match_parent"
                                     android:layout_height="0dp"
                                     android:layout_gravity="center"
                                     android:layout_margin="@dimen/cardViewMargin"
                                     android:layout_weight="1"
                                     android:gravity="center"
-                                    android:text="Time since"
                                     android:textAlignment="center"
                                     android:textColor="@color/colorAccent" />
 
@@ -202,7 +206,6 @@
                             android:layout_columnWeight="2"
                             android:layout_margin="@dimen/cardview_default_radius"
                             android:layout_rowWeight="1"
-                            android:backgroundTint="@color/colorPrimaryLight"
                             android:elevation="@dimen/cardViewMargin"
                             app:cardCornerRadius="@dimen/cardview_default_radius">
 
@@ -220,13 +223,13 @@
                                     android:layout_weight="1" />
 
                                 <TextView
+                                    android:id="@+id/xLifeRegained"
                                     android:layout_width="match_parent"
                                     android:layout_height="0dp"
                                     android:layout_gravity="center"
                                     android:layout_margin="@dimen/cardViewMargin"
                                     android:layout_weight="1"
                                     android:gravity="center"
-                                    android:text="Time since"
                                     android:textAlignment="center"
                                     android:textColor="@color/colorAccent" />
 
@@ -248,7 +251,6 @@
                             android:layout_columnWeight="2"
                             android:layout_margin="@dimen/cardview_default_radius"
                             android:layout_rowWeight="2"
-                            android:backgroundTint="@color/colorPrimaryLight"
                             android:elevation="@dimen/cardViewMargin"
                             app:cardCornerRadius="@dimen/cardview_default_radius">
 
@@ -266,13 +268,13 @@
                                     android:layout_weight="1" />
 
                                 <TextView
+                                    android:id="@+id/xCigNotSmoked"
                                     android:layout_width="match_parent"
                                     android:layout_height="0dp"
                                     android:layout_gravity="center"
                                     android:layout_margin="@dimen/cardViewMargin"
                                     android:layout_weight="1"
                                     android:gravity="center"
-                                    android:text="Time since"
                                     android:textAlignment="center"
                                     android:textColor="@color/colorAccent" />
 
@@ -296,12 +298,15 @@
                     android:layout_height="200dp"
                     android:layout_margin="@dimen/cardViewMargin"
                     android:elevation="@dimen/cardViewMargin"
+                    android:layout_gravity="left"
                     app:cardCornerRadius="@dimen/cardview_default_radius">
 
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:orientation="vertical"
+                        android:layout_gravity="start"
+                        android:gravity="start"
                         android:weightSum="4">
 
                         <TextView
@@ -310,7 +315,7 @@
                             android:layout_gravity="center"
                             android:layout_margin="@dimen/cardViewMargin"
                             android:layout_weight="1"
-                            android:gravity="center"
+                            android:gravity="start"
                             android:text="@string/during_the_period_that_you_smoked"
                             android:textAlignment="center"
                             android:textColor="@color/colorAccent" />
@@ -328,13 +333,13 @@
                                 android:layout_weight="1" />
 
                             <TextView
+                                android:id="@+id/xTotalCigSmoked"
                                 android:layout_width="0dp"
                                 android:layout_height="match_parent"
                                 android:layout_gravity="center"
                                 android:layout_margin="@dimen/cardViewMargin"
                                 android:layout_weight="4"
-                                android:gravity="center"
-                                android:text="@string/during_the_period_that_you_smoked"
+                                android:gravity="start"
                                 android:textAlignment="center"
                                 android:textColor="@color/colorAccent" />
                         </LinearLayout>
@@ -352,13 +357,13 @@
                                 android:layout_weight="1" />
 
                             <TextView
+                                android:id="@+id/xMoneyWasted"
                                 android:layout_width="0dp"
                                 android:layout_height="match_parent"
                                 android:layout_gravity="center"
                                 android:layout_margin="@dimen/cardViewMargin"
                                 android:layout_weight="4"
-                                android:gravity="center"
-                                android:text="@string/during_the_period_that_you_smoked"
+                                android:gravity="start"
                                 android:textAlignment="center"
                                 android:textColor="@color/colorAccent" />
                         </LinearLayout>
@@ -376,13 +381,14 @@
                                 android:layout_weight="1" />
 
                             <TextView
+                                android:id="@+id/xLifeLost"
                                 android:layout_width="0dp"
                                 android:layout_height="match_parent"
-                                android:layout_gravity="center"
+                                android:layout_gravity="start"
                                 android:layout_margin="@dimen/cardViewMargin"
                                 android:layout_weight="4"
+
                                 android:gravity="center"
-                                android:text="@string/during_the_period_that_you_smoked"
                                 android:textAlignment="center"
                                 android:textColor="@color/colorAccent" />
                         </LinearLayout>
@@ -528,13 +534,11 @@
             </LinearLayout>
         </ScrollView>
 
-
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:layout_margin="2dp"
             android:layout_weight="1"
-            android:background="@color/textSecondary"
             android:elevation="@dimen/cardViewMargin"
             android:orientation="horizontal"
             android:weightSum="3">

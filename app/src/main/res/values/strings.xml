@@ -33,6 +33,13 @@
     <string name="during_the_period_that_you_smoked">During the period that you smoked:</string>
     <string name="what_will_you_get_in_return">What will you get in return ?</string>
     <string name="money_and_life_expectancy">Money and life Expectancy</string>
+    <string name="not">nothing</string>
+    <string name="picture_yourself_as_a_non_smoker">Picture yourself as a Non-Smoker</string>
+    <string name="select_the_date_when_you_last_smoked">Date when you last smoked</string>
+    <string name="day_1">Day 1</string>
+    <string name="it_s_been_1_days">It\'s been 1 day</string>
+    <string name="_1d_22h_2m_51s">1d 22h 2m 51s</string>
+
 
     <string-array name="currency_array">
         <item>CAD - Canadian Dollar</item>
